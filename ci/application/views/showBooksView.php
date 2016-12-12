@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body> 
-      	
+      	<?php echo $info;?>
       <table border = "1"> 
          <?php 
             
@@ -38,10 +38,22 @@ and open the template in the editor.
          ?>
       </table> 
         <br><br>
-        <a href = "<?php echo base_url(); ?>index.php/booksController/addBooks">Add New Books</a>
+        <a href = "<?php echo site_url(); ?>booksController/addBooks">Add New Books</a>
         <br><br>
-        <a href = "<?php echo base_url(); ?>index.php/booksController/maps">Google Maps</a>
+        <a href = "<?php echo site_url(); ?>booksController/maps">Google Maps</a>
         <br><br>
-        <a href = "<?php echo base_url(); ?>index.php/upload">Upload Files</a>
+        <a href = "<?php echo site_url(); ?>upload">Upload Images</a>
+        <br><br>
+        <a href = "<?php echo site_url();?>BooksController">Home Page</a>
+        <hr>
+      <form action="uploadFunc" method="post" enctype="multipart/form-data">
+            
+                <br><br>
+                <input type = "file" name = "excelfile" size = "20">
+                <input type="hidden" name="fileFlag" value="1">
+                <br>  <br>
+                <input type = "submit" value = "Import Data (csv,xlsx)"> 
+                  
+     </form>
    </body>
 </html>

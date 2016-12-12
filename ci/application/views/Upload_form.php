@@ -11,11 +11,14 @@ and open the template in the editor.
     </head>
     <body>
       <?php
-      echo "Hello"; 
+     // echo "Hello"; 
       echo $error; 
-      echo form_open_multipart('upload/do_upload');?> 
-       <form action="" method="">
-         <input type = "file" name = "userfile" size = "20" /> 
+      //echo form_open_multipart('upload/do_upload');?> 
+        <form action="upload/uploadFunc" method="post" enctype="multipart/form-data">
+<!--            <label for="user">
+                <input type="text" name="user">-->
+                <br><br>
+                <input type = "file" name = "userfile" size = "20" /> 
          <br /><br /> 
          <input type = "submit" value = "upload" /> 
      </form>
