@@ -81,5 +81,9 @@ if($this->email->send()){
             
      }
     }
+
+    public function email_check(){
+        $this->load->view('email_field');
+    }
     
     }
